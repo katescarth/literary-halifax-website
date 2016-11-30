@@ -1,0 +1,211 @@
+Installed curatescape theme and all other related plugins from curatescape github
+
+[inet2005@localhost ~]$ ssh  -i ~/.ssh/git_rsa nlail@206.167.183.207
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-100-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Nov 10 16:37:07 UTC 2016
+
+  System load:  0.0               Processes:           92
+  Usage of /:   7.5% of 19.65GB   Users logged in:     0
+  Memory usage: 13%               IP address for eth0: 192.168.118.11
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+20 packages can be updated.
+20 updates are security updates.
+
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Nov 10 16:37:07 2016 from 142.177.81.10
+nlail@dev1:~$ cd /var/www/html
+nlail@dev1:/var/www/html$ ls
+admin        bootstrap.php  files      install      plugins    robots.txt
+application  db.ini         index.php  license.txt  README.md  themes
+nlail@dev1:/var/www/html$ cd plugins
+nlail@dev1:/var/www/html/plugins$ ls
+Coins  ExhibitBuilder  SimplePages
+nlail@dev1:/var/www/html/plugins$ ls
+Coins  ExhibitBuilder  SimplePages
+nlail@dev1:/var/www/html/plugins$ cd ..
+nlail@dev1:/var/www/html$ ls
+admin        bootstrap.php  files      install      plugins    robots.txt
+application  db.ini         index.php  license.txt  README.md  themes
+nlail@dev1:/var/www/html$ cd themes
+nlail@dev1:/var/www/html/themes$ ls
+berlin  curatescape  default  seasons  theme-curatescape
+nlail@dev1:/var/www/html/themes$ cd curatescape/
+nlail@dev1:/var/www/html/themes/curatescape$ ls
+collections  custom.php       fonts        items         stealth-index.php
+common       error            geolocation  javascripts   theme.ini
+config.ini   exhibit-builder  images       search        theme.jpg
+css          files            index.php    simple-pages  tour-builder
+nlail@dev1:/var/www/html/themes/curatescape$ cd geolocation/
+nlail@dev1:/var/www/html/themes/curatescape/geolocation$ ls
+map
+nlail@dev1:/var/www/html/themes/curatescape/geolocation$ cd ..
+nlail@dev1:/var/www/html/themes/curatescape$ cd ..
+nlail@dev1:/var/www/html/themes$ cd ..
+nlail@dev1:/var/www/html$ ls
+admin        bootstrap.php  files      install      plugins    robots.txt
+application  db.ini         index.php  license.txt  README.md  themes
+nlail@dev1:/var/www/html$ cd plugins
+nlail@dev1:/var/www/html/plugins$ ls
+Coins  ExhibitBuilder  SimplePages
+nlail@dev1:/var/www/html/plugins$ git clone https://github.com/CPHDH/CuratescapeJSON.git
+fatal: could not create work tree dir 'CuratescapeJSON'.: Permission denied
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/CPHDH/CuratescapeJSON.git
+Cloning into 'CuratescapeJSON'...
+remote: Counting objects: 431, done.
+remote: Total 431 (delta 0), reused 0 (delta 0), pack-reused 431
+Receiving objects: 100% (431/431), 63.14 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (141/141), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git https://github.com/CPHDH/CuratescapeAdminHelper.git
+git: 'https://github.com/CPHDH/CuratescapeAdminHelper.git' is not a git command. See 'git --help'.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/CPHDH/CuratescapeAdminHelper.git
+Cloning into 'CuratescapeAdminHelper'...
+remote: Counting objects: 90, done.
+remote: Total 90 (delta 0), reused 0 (delta 0), pack-reused 90
+Unpacking objects: 100% (90/90), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/CPHDH/TourBuilder.git
+Cloning into 'TourBuilder'...
+remote: Counting objects: 756, done.
+remote: Total 756 (delta 0), reused 0 (delta 0), pack-reused 756
+Receiving objects: 100% (756/756), 149.04 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (400/400), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/CPHDH/TourBuilder.git
+fatal: destination path 'TourBuilder' already exists and is not an empty directory.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/omeka/plugin-Geolocation.git
+Cloning into 'plugin-Geolocation'...
+remote: Counting objects: 1801, done.
+remote: Total 1801 (delta 0), reused 0 (delta 0), pack-reused 1801
+Receiving objects: 100% (1801/1801), 575.49 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (832/832), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/omeka/plugin-SimplePages.git
+Cloning into 'plugin-SimplePages'...
+remote: Counting objects: 1886, done.
+remote: Total 1886 (delta 0), reused 0 (delta 0), pack-reused 1886
+Receiving objects: 100% (1886/1886), 683.44 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (958/958), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/CPHDH/SuperRss.git
+Cloning into 'SuperRss'...
+remote: Counting objects: 457, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 457 (delta 1), reused 1 (delta 1), pack-reused 454
+Receiving objects: 100% (457/457), 135.94 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (196/196), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/ebellempire/ThemeHelper.git
+Cloning into 'ThemeHelper'...
+remote: Counting objects: 242, done.
+remote: Total 242 (delta 0), reused 0 (delta 0), pack-reused 242
+Receiving objects: 100% (242/242), 213.70 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (64/64), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ sudo git clone https://github.com/ebellempire/MoreUserRoles.git
+Cloning into 'MoreUserRoles'...
+remote: Counting objects: 28, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 28 (delta 0), reused 0 (delta 0), pack-reused 26
+Unpacking objects: 100% (28/28), done.
+Checking connectivity... done.
+nlail@dev1:/var/www/html/plugins$ ls
+Coins                   ExhibitBuilder      plugin-SimplePages  ThemeHelper
+CuratescapeAdminHelper  MoreUserRoles       SimplePages         TourBuilder
+CuratescapeJSON         plugin-Geolocation  SuperRss
+nlail@dev1:/var/www/html/plugins$ Write failed: Broken pipe
+[inet2005@localhost ~]$ ssh  -i ~/.ssh/git_rsa nlail@206.167.183.207
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-100-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Nov 10 17:52:15 UTC 2016
+
+  System load:  0.0               Processes:           94
+  Usage of /:   7.5% of 19.65GB   Users logged in:     1
+  Memory usage: 14%               IP address for eth0: 192.168.118.11
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+20 packages can be updated.
+20 updates are security updates.
+
+New release '16.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Nov 10 17:52:16 2016 from 142.177.81.10
+nlail@dev1:~$ cd /var/www/html
+nlail@dev1:/var/www/html$ ls
+admin        bootstrap.php  files      install      plugins    robots.txt
+application  db.ini         index.php  license.txt  README.md  themes
+nlail@dev1:/var/www/html$ cd admin
+nlail@dev1:/var/www/html/admin$ ls
+index.php  themes
+nlail@dev1:/var/www/html/admin$ cd ..
+nlail@dev1:/var/www/html$ cd plugins
+nlail@dev1:/var/www/html/plugins$ ls
+Coins                   ExhibitBuilder      plugin-SimplePages  ThemeHelper
+CuratescapeAdminHelper  MoreUserRoles       SimplePages         TourBuilder
+CuratescapeJSON         plugin-Geolocation  SuperRss
+nlail@dev1:/var/www/html/plugins$ cd plugin-Geolocation/
+nlail@dev1:/var/www/html/plugins/plugin-Geolocation$ la
+build.xml        controllers            .git       models      tests  views
+config_form.php  GeolocationPlugin.php  languages  plugin.ini  .tx
+nlail@dev1:/var/www/html/plugins/plugin-Geolocation$ ls
+build.xml        controllers            languages  plugin.ini  views
+config_form.php  GeolocationPlugin.php  models     tests
+nlail@dev1:/var/www/html/plugins/plugin-Geolocation$ cd ..
+nlail@dev1:/var/www/html/plugins$ ls
+Coins                   ExhibitBuilder      plugin-SimplePages  ThemeHelper
+CuratescapeAdminHelper  MoreUserRoles       SimplePages         TourBuilder
+CuratescapeJSON         plugin-Geolocation  SuperRss
+nlail@dev1:/var/www/html/plugins$ pwd
+/var/www/html/plugins
+nlail@dev1:/var/www/html/plugins$ mv /var/www/html/plugins/plugin-
+nlail@dev1:/var/www/html/plugins$ mv /var/www/html/plugins/plugin-Geolocation/ /var/www/html/plugins/Geolocation
+mv: cannot move ‘/var/www/html/plugins/plugin-Geolocation/’ to ‘/var/www/html/plugins/Geolocation’: Permission denied
+nlail@dev1:/var/www/html/plugins$ sudo mv /var/www/html/plugins/plugin-Geolocation/ /var/www/html/plugins/Geolocation
+nlail@dev1:/var/www/html/plugins$ ls
+Coins                   CuratescapeJSON  Geolocation    plugin-SimplePages  SuperRss     TourBuilder
+CuratescapeAdminHelper  ExhibitBuilder   MoreUserRoles  SimplePages         ThemeHelper
+nlail@dev1:/var/www/html/plugins$ cd Geolocation/
+nlail@dev1:/var/www/html/plugins/Geolocation$ ls
+build.xml  config_form.php  controllers  GeolocationPlugin.php  languages  models  plugin.ini  tests  views
+nlail@dev1:/var/www/html/plugins/Geolocation$ cd ..
+nlail@dev1:/var/www/html/plugins$ ls
+Coins                   CuratescapeJSON  Geolocation    plugin-SimplePages  SuperRss     TourBuilder
+CuratescapeAdminHelper  ExhibitBuilder   MoreUserRoles  SimplePages         ThemeHelper
+nlail@dev1:/var/www/html/plugins$ cd SimplePages/
+nlail@dev1:/var/www/html/plugins/SimplePages$ ls
+config_form.php  controllers  helpers  languages  models  plugin.ini  SimplePagesPlugin.php  tests  views
+nlail@dev1:/var/www/html/plugins/SimplePages$ cd ..
+nlail@dev1:/var/www/html/plugins$ cd plugin-SimplePages/
+nlail@dev1:/var/www/html/plugins/plugin-SimplePages$ ls
+build.xml  config_form.php  controllers  helpers  languages  models  plugin.ini  SimplePagesPlugin.php  tests  views
+nlail@dev1:/var/www/html/plugins/plugin-SimplePages$ cd ..
+nlail@dev1:/var/www/html/plugins$ sudo mv /var/www/html/plugins/plugin-SimplePages/ /var/www/html/plugins/SimplePages
+nlail@dev1:/var/www/html/plugins$ ls
+Coins  CuratescapeAdminHelper  CuratescapeJSON  ExhibitBuilder  Geolocation  MoreUserRoles  SimplePages  SuperRss  ThemeHelper  TourBuilder
+nlail@dev1:/var/www/html/plugins$ cd SimplePages/
+nlail@dev1:/var/www/html/plugins/SimplePages$ ls
+config_form.php  controllers  helpers  languages  models  plugin.ini  plugin-SimplePages  SimplePagesPlugin.php  tests  views
+nlail@dev1:/var/www/html/plugins/SimplePages$ 
